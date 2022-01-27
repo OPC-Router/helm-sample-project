@@ -20,10 +20,22 @@
 ## **Contents**
 - [About the Sample](#about-the-sample)
   - [**Contents**](#contents)
+  - [**General Information**](#general-information)
+    - [**What is the sample doing?**](#what-is-the-sample-doing)
 - [Getting Started](#getting-started)
   - [**Prequisites**](#prequisites)
   - [**Installation**](#installation)
   - [**Uninstalling**](#uninstalling)
+
+## **General Information**
+> This is a project sample for the opc router helm chart.
+> It is for demonstrating how to deploy a opc router project from a git repository with the helm chart.
+> [Read more about the OPC Router Helm Chart here.](https://github.com/OPC-Router/helm-charts)
+
+### **What is the sample doing?**
+- This sample is a fully functional OPC Router 4 project sample.
+- It is a very simple project that will periodically write a file in the home directory of the docker container it is deployed in.
+- The written file is a text file containing the by the config.yaml configured string and a random number.
 
 # Getting Started
 
