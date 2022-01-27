@@ -35,7 +35,8 @@
 ### **What is the sample doing?**
 - This sample is a fully functional OPC Router 4 project sample.
 - It is a very simple project that will periodically write a file in the home directory of the docker container it is deployed in.
-- The written file is a text file containing the by the config.yaml configured string and a random number.
+- The written file is a text file containing the string of an environment variable and a random number.
+- The environment variable is declared in the config.yaml and initialized in the helm install command parameters.
 
 # Getting Started
 
@@ -50,6 +51,7 @@ $ helm install my-opcrouter <Hier Pfad einfügen> \
   --set project.projectRepo=https://github.com/OPC-Router/helm-sample-project.git \
   --set project.Path=Sampleproject.rpe \
   --set project.configPath=config.yaml \
+  --set envVars[0].Config="This is a random number: " \
   --set I_do_accept_the_EULA=true
 ```
 This command will install the opc router with standard settings, as a service with a seperate mongodb container. The mongodb won't require authentification, which is not recommended. Accepting the [End User License Agreement](https://www.opc-router.com/terms-of-use-and-eula/) by setting `I_do_accept_the_EULA` to true is required for the OPCRouter to run.
