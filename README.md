@@ -45,9 +45,20 @@
 - Helm 3.1.0
 
 ## **Installation**
-You can install this project on any kubernetes cluster using the helm chart with this command:
+[Helm](https://helm.sh) must be installed to use the charts.  Please refer to
+Helm's [documentation](https://helm.sh/docs) to get started.
+
+Once Helm has been set up correctly, add the repo as follows:
 ```shell
-$ helm install my-opcrouter <Hier Pfad einfügen> \
+helm repo add opc-router https://opc-router.github.io/helm-charts
+```
+If you had already added this repo earlier, run `helm repo update` to retrieve
+the latest versions of the packages.  You can then run `helm search repo
+<alias>` to see the charts.
+
+You can now install this project on any kubernetes cluster using the helm chart with this command:
+```shell
+$ helm install my-opcrouter opc-router/opc-router \
   --set project.projectRepo=https://github.com/OPC-Router/helm-sample-project.git \
   --set project.Path=Sampleproject.rpe \
   --set project.configPath=config.yaml \
