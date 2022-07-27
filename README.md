@@ -59,7 +59,7 @@ the latest versions of the packages.  You can then run `helm search repo
 You can now install this project on any kubernetes cluster using the helm chart with this command:
 ```shell
 $ helm install my-opcrouter opc-router/opc-router \
-  --set image.tag="4.26-RC" \
+  --set image.tag="4.27" \
   --set project.projectRepo=https://github.com/OPC-Router/helm-sample-project.git \
   --set project.projectPath=Sampleproject.rpe \
   --set project.configPath=config.yaml \
