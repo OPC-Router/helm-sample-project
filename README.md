@@ -33,7 +33,7 @@
 > [Read more about the OPC Router Helm Chart here.](https://github.com/OPC-Router/helm-charts)
 
 ### **What is the sample doing?**
-- This sample is a fully functional OPC Router 4 project sample.
+- This sample is a fully functional OPC Router 5 project sample.
 - It is a very simple project that will periodically write a file in the home directory of the docker container it is deployed in.
 - The written file is a text file containing the string of an environment variable and a random number.
 - The environment variable is declared in the config.yaml and initialized in the helm install command parameters.
@@ -59,7 +59,6 @@ the latest versions of the packages.  You can then run `helm search repo
 You can now install this project on any kubernetes cluster using the helm chart with this command:
 ```shell
 $ helm install my-opcrouter opc-router/opc-router \
-  --set image.tag="4.27" \
   --set project.projectRepo=https://github.com/OPC-Router/helm-sample-project.git \
   --set project.projectPath=Sampleproject.rpe \
   --set project.configPath=config.yaml \
